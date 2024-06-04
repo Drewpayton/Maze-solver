@@ -31,7 +31,7 @@ class Window:
         self.running = False
 
     # calls a instance of Line to create a line on the canvas.
-    def draw_line(self, Line, fill_color):
+    def draw_line(self, Line, fill_color="black"):
         Line.draw(self.canvas, fill_color)
 
 # Allows for points to be specified.
@@ -49,5 +49,7 @@ class Line:
         self.p2 = p2
     
     # Uses points from point class to create a line. 
-    def draw(self, canvas, fill_color):
-        canvas.create_line(self.p1.x, self.p1.y, self.p2.x, self.p2.y, fill=fill_color, width=5)
+    def draw(self, canvas, fill_color="black"):
+        canvas.create_line(self.p1.x, self.p1.y, self.p2.x, self.p2.y, fill=fill_color, width=2)
+
+
