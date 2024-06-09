@@ -1,4 +1,5 @@
 from window import Point, Line
+import time
 
 # This will allow us to create multiple cells which can have anywhere from 0 - 4 walls 
 class Cell:
@@ -29,28 +30,28 @@ class Cell:
             self._win.draw_line(left_line)
         else:
             left_line = Line(Point(x1, y1), Point(x1, y2))
-            self._win.draw_line(left_line, "pink")
+            self._win.draw_line(left_line, "white")
 
         if self.has_right_wall:
             right_line = Line(Point(x2, y1), Point(x2, y2))
             self._win.draw_line(right_line)
         else:
             right_line = Line(Point(x2, y1), Point(x2, y2))
-            self._win.draw_line(right_line, "pink")
+            self._win.draw_line(right_line, "white")
 
         if self.has_top_wall:
             top_line = Line(Point(x1, y1), Point(x2, y1))
             self._win.draw_line(top_line)
         else:
             top_line = Line(Point(x1, y1), Point(x2, y1))
-            self._win.draw_line(top_line, "pink")
+            self._win.draw_line(top_line, "white")
 
         if self.has_bottom_wall:
             bottom_line = Line(Point(x1, y2), Point(x2, y2))
             self._win.draw_line(bottom_line)
         else:
             bottom_line = Line(Point(x1, y2), Point(x2, y2))
-            self._win.draw_line(bottom_line, "pink")
+            self._win.draw_line(bottom_line, "white")
 
     # Draws the move between each cell.
     def draw_move(self, to_cell, undo=False):
@@ -64,8 +65,10 @@ class Cell:
 
         # draws the line between the two cells
         line = Line(Point(self.center_x, self.center_y), Point(cell_center_x, cell_center_y))
-        fill_color = "red" if not undo else "grey"
-        self._win.draw_line(line, fill_color)
+        if not undo:
+            self._win.draw_line(line, fill_color="red")
+        else:
+            self._win.draw_line(line, fill_color="grey")
 
             
             
