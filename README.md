@@ -30,8 +30,8 @@ To get a local copy up and running, follow these steps:
 
 ## Usage
 ![alt text](./Build%20Maze.PNG)
-![alt text](http://url/to/img.png)
-![alt text](http://url/to/img.png)
+![alt text](./Created%20Maze.PNG)
+![alt text](/solved%20maze.PNG)
 
 To generate and solve a maze, run the following command:
 
