@@ -29,7 +29,7 @@ To get a local copy up and running, follow these steps:
 
 
 ## Usage
-![alt text](./BuildMaze.PNG)
+![alt text](/BuildMaze.PNG)
 ![alt text](http://url/to/img.png)
 ![alt text](http://url/to/img.png)
 
